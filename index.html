@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width , initial-scale = 1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Weather V2</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="part-one">
+        <div class="header">
+          <div class="button">
+            <button class="search">
+              <img src="image/search.png" width="25px" class="search-img" />
+            </button>
+            <button class="save display-none">
+              <img src="image/save.png" width="25px" class="save-img" />
+            </button>
+          </div>
+
+          <div class="name-input">
+            <div class="name"></div>
+            <input
+              type="text"
+              class="input display-none"
+              spellcheck="false"
+              placeholder="Enter City Name"
+            />
+          </div>
+
+          <div class="date">
+            <div class="today"></div>
+          </div>
+        </div>
+
+        <div class="main">
+          <div class="temp">
+            <div class="degree"></div>
+            <div class="wind-humidity">
+              <div class="wh">
+                <img src="image/wind.png" width="40px" />
+                <p class="wind info"></p>
+                <span class="tooltiptext"></span>
+              </div>
+              <div class="wh">
+                <img src="image/humidity.png" width="40px" />
+                <p class="humidity info"></p>
+                <span class="tooltiptext"></span>
+              </div>
+              <div class="wh">
+                <img src="image/UVindex.png" width="40px" />
+                <p class="UVindex info"></p>
+                <span class="tooltiptext"></span>
+              </div>
+            </div>
+          </div>
+          <div class="description"></div>
+        </div>
+
+        <div class="seven-days">
+          
+        </div>
+      </div>
+      <div class="part-two">
+        <div class="greet-time">
+          <div class="greet"></div>
+          <div class="time"></div>
+        </div>
+        <div class="mini-temp">
+          <div class="mini-degree">
+            <div class="mini-degree-unit"></div>
+            <div class="mini-whu">
+              <div class="wh">
+                <img src="image/wind.png" width="25px" />
+                <p class="mini-wind"></p>
+              </div>
+              <div class="wh">
+                <img src="image/humidity.png" width="25px" />
+                <p class="mini-humidity"></p>
+              </div>
+              <div class="wh">
+                <img src="image/UVindex.png" width="25px" />
+                <p class="mini-UV"></p>
+              </div>
+            </div>
+          </div>
+          <div class="mini-descri">
+            <div class="real-feel">
+              <div class="feellike"></div>
+            </div>
+            <div class="mini-description">
+              <div class="mini-desc"></div>
+            </div>
+          </div>
+        </div>
+        <div class="hourly">
+        </div>
+      </div>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
