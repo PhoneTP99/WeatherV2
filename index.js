@@ -33,7 +33,7 @@ const showCityName = () => {
 
 const getLocationIdAndWeather = (cityName, apiKey) => {
   fetch(
-    `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${cityName}`
+    `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${cityName}`
   )
     .then((data) => data.json())
     .then((data) => {
@@ -42,7 +42,7 @@ const getLocationIdAndWeather = (cityName, apiKey) => {
       }
       const { Key } = data[0];
       return fetch(
-        `http://dataservice.accuweather.com/currentconditions/v1/${Key}?apikey=${apiKey}&details=true`
+        `https://dataservice.accuweather.com/currentconditions/v1/${Key}?apikey=${apiKey}&details=true`
       );
     })
     .then((data) => data.json())
@@ -82,7 +82,7 @@ const getLocationIdAndWeather = (cityName, apiKey) => {
 
 const getLocationIdAndWeatherBylatlong = (lat, long,apiKey) => {
   fetch(
-    `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?
+    `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?
     apikey=%09c4WCfjxbWAwj3tHgZkO5zIKUrf7ZuwGw&q=${lat}%2C${long}&toplevel=true`
   )
     .then((data) => data.json())
@@ -93,7 +93,7 @@ const getLocationIdAndWeatherBylatlong = (lat, long,apiKey) => {
       const { Key } = data[0];
       document.querySelector('.name').innerHTML =`${data[0].LocalizedName}`;
       return fetch(
-        `http://dataservice.accuweather.com/currentconditions/v1/${Key}?apikey=${apiKey}&details=true`
+        `https://dataservice.accuweather.com/currentconditions/v1/${Key}?apikey=${apiKey}&details=true`
       );
     })
     .then((data) => data.json())
@@ -134,13 +134,13 @@ const getLocationIdAndWeatherBylatlong = (lat, long,apiKey) => {
 
 const getFiveDaysForecast = (cityName, apiKey) => {
   fetch(
-    `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${cityName}`
+    `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${cityName}`
   )
     .then((data) => data.json())
     .then((data) => {
       const { Key } = data[0];
       return fetch(
-        `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${Key}?apikey=${apiKey}&metric=true`
+        `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${Key}?apikey=${apiKey}&metric=true`
       );
     })
     .then((data) => data.json())
@@ -186,14 +186,14 @@ const getFiveDaysForecast = (cityName, apiKey) => {
 
 const getFiveDaysForecastBylatlong = (lat, long,apiKey) => {
   fetch(
-    `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?
+    `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?
     apikey=%09c4WCfjxbWAwj3tHgZkO5zIKUrf7ZuwGw&q=${lat}%2C${long}&toplevel=true`
   )
     .then((data) => data.json())
     .then((data) => {
       const { Key } = data[0];
       return fetch(
-        `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${Key}?apikey=${apiKey}&metric=true`
+        `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${Key}?apikey=${apiKey}&metric=true`
       );
     })
     .then((data) => data.json())
@@ -239,14 +239,14 @@ const getFiveDaysForecastBylatlong = (lat, long,apiKey) => {
 
 const getHourlyForecastBylatlong = (lat, long , apiKey) => {
   fetch(
-    `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?
+    `https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?
     apikey=%09c4WCfjxbWAwj3tHgZkO5zIKUrf7ZuwGw&q=${lat}%2C${long}&toplevel=true`
   )
     .then((data) => data.json())
     .then((data) => {
       const { Key } = data[0];
       return fetch(
-        `http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${Key}?apikey=${apiKey}&metric=true`
+        `https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${Key}?apikey=${apiKey}&metric=true`
       );
     })
     .then((data) => data.json())
@@ -285,13 +285,13 @@ const getHourlyForecastBylatlong = (lat, long , apiKey) => {
 
 const getHourlyForecast = (cityName, apiKey) => {
   fetch(
-    `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${cityName}`
+    `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=${cityName}`
   )
     .then((data) => data.json())
     .then((data) => {
       const { Key } = data[0];
       return fetch(
-        `http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${Key}?apikey=${apiKey}&metric=true`
+        `https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${Key}?apikey=${apiKey}&metric=true`
       );
     })
     .then((data) => data.json())
