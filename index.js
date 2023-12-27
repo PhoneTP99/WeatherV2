@@ -335,6 +335,7 @@ window.addEventListener("load", () => {
   navigator.geolocation.getCurrentPosition((position) => {
     lat = position.coords.latitude;
     long = position.coords.longitude;
+    console.log(lat,long)
     getLocationIdAndWeatherBylatlong(lat,long,apiKey);
     getFiveDaysForecastBylatlong(lat,long,apiKey);
     getHourlyForecastBylatlong(lat,long,apiKey);
