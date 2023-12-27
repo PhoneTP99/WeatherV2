@@ -274,3 +274,8 @@ body {
         display: grid;
         grid-template-columns : 1fr ;
 }
+
+    .header {
+        display: grid;
+        grid-template-columns: 60px 1fr 80px;
+    }
