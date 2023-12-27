@@ -10,7 +10,7 @@ const setTimeAndDate = () => {
 
   if (greeting >= "5:00" && greeting <= "12:00") {
     document.querySelector(".greet").innerHTML = "Good Morning";
-  } else if (greeting >= "12:01" && greeting <= "6:00") {
+  } else if (greeting >= "12:01" && greeting <= "18:00") {
     document.querySelector(".greet").innerHTML = "Good Afternoon";
   } else {
     document.querySelector(".greet").innerHTML = "Good Evening";
