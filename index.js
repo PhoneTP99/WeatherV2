@@ -336,10 +336,10 @@ window.addEventListener("load", () => {
     lat = position.coords.latitude;
     long = position.coords.longitude;
     console.log(lat,long)
-    getLocationIdAndWeatherBylatlong(lat,long,apiKey);
+  });
+  getLocationIdAndWeatherBylatlong(lat,long,apiKey);
     getFiveDaysForecastBylatlong(lat,long,apiKey);
     getHourlyForecastBylatlong(lat,long,apiKey);
-  })
 });
 
 document.querySelector(".search").addEventListener("click", () => {
