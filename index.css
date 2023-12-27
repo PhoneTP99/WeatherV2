@@ -15,6 +15,7 @@ body {
 
     color: #222024;
     font-family: 'Fira Sans', sans-serif;
+    cursor: pointer;
 }
 
 .container {
