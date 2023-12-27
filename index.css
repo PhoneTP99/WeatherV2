@@ -269,3 +269,9 @@ body {
 .eachhour:hover {
     border:2px solid #222024;
 }
+
+@media (max-width: 600px){
+    .container {
+        display: grid;
+        grid-template-columns : 1fr ;
+}
