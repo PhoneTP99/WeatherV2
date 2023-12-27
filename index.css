@@ -4,6 +4,8 @@
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     outline: none;
+    scroll-width: none;
+}
 }
 
 body {
