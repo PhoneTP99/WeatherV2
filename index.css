@@ -15,7 +15,6 @@ body {
 
     color: #222024;
     font-family: 'Fira Sans', sans-serif;
-    cursor: pointer;
 }
 
 .container {
@@ -28,6 +27,10 @@ body {
 
     display: grid;
     grid-template-columns: 70% 30%;
+}
+
+.container :is(div,p,span,input){
+    cursor: pointer;
 }
 
 .part-two {
