@@ -83,7 +83,7 @@ const getLocationIdAndWeather = (cityName, apiKey) => {
 const getLocationIdAndWeatherBylatlong = (lat, long,apiKey) => {
   fetch(
     `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?
-    apikey=%09c4WCfjxbWAwj3tHgZkO5zIKUrf7ZuwGw&q=${lat}%2C${long}&toplevel=true`
+    apikey=c4WCfjxbWAwj3tHgZkO5zIKUrf7ZuwGw&q=${lat}%20%2C%20${long}&toplevel=true`
   )
     .then((data) => data.json())
     .then((data) => {
