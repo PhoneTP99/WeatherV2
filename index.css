@@ -289,4 +289,6 @@ body {
         font-size : 8vw;
         padding: 0px;
     }
+    .part-two {
+        border-radius : 0px 0px 15px 15px;
 }
