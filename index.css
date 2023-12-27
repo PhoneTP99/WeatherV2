@@ -19,7 +19,7 @@ body {
 
 .container {
     background-color: white;
-    width: 80%;
+    width: 90%;
     height: 80%;
 
     border: none;
@@ -278,7 +278,7 @@ body {
 
     .header {
         display: grid;
-        grid-template-columns: 60px 1fr 70px;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     body {
@@ -290,3 +290,4 @@ body {
         font-size : 8vw;
         padding: 0px;
     }
+}
