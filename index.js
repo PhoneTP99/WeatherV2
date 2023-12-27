@@ -187,7 +187,7 @@ const getFiveDaysForecast = (cityName, apiKey) => {
 const getFiveDaysForecastBylatlong = (lat, long,apiKey) => {
   fetch(
     `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?
-    apikey=c4WCfjxbWAwj3tHgZkO5zIKUrf7ZuwGw&q=${lat}%20%2C%20${long}&toplevel=true`
+    apikey=${apiKey}&q=${lat}%20%2C%20${long}&toplevel=true`
   )
     .then((data) => data.json())
     .then((data) => {
@@ -240,7 +240,7 @@ const getFiveDaysForecastBylatlong = (lat, long,apiKey) => {
 const getHourlyForecastBylatlong = (lat, long , apiKey) => {
   fetch(
     `http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?
-    apikey=c4WCfjxbWAwj3tHgZkO5zIKUrf7ZuwGw&q=${lat}%20%2C%20${long}&toplevel=true`
+    apikey=${apiKey}&q=${lat}%20%2C%20${long}&toplevel=true`
   )
     .then((data) => data.json())
     .then((data) => {
