@@ -274,17 +274,15 @@ body {
         display: grid;
         grid-template-columns : 1fr ;
         grid-template-rows: 1fr 1fr ;
-        overflow-y: scroll;
 }
 
     .header {
         display: grid;
-        grid-template-columns: 60px 1fr 1fr;
+        grid-template-columns: 60px 1fr 80px;
     }
 
     body {
         height: 1500px;
-        overflow: hidden;
     }
 
     .degree {
