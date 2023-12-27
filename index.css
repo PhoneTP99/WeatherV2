@@ -273,6 +273,7 @@ body {
     .container {
         display: grid;
         grid-template-columns : 1fr ;
+        grid-template-rows: 1fr 1fr ;
 }
 
     .header {
@@ -280,6 +281,6 @@ body {
         grid-template-columns: 60px 1fr 70px;
     }
 
-    .body {
+    body {
         height: 1500px;
     }
