@@ -283,4 +283,10 @@ body {
 
     body {
         height: 1500px;
+        overflow: hidden;
+    }
+
+    .degree {
+        font-size : 8vw;
+        padding: 0px;
     }
