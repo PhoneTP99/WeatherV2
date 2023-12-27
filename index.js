@@ -89,7 +89,7 @@ const getLocationIdAndWeatherBylatlong = (lat,long,apiKey) => {
       if ( data.length === 0) {
         return alert('City Not Found!')
       }
-      const { Key } = data[0];
+      const { Key } = data;
       document.querySelector('.name').innerHTML =`${data[0].LocalizedName}`;
       return fetch(
         `http://dataservice.accuweather.com/currentconditions/v1/${Key}?apikey=${apiKey}&details=true`
@@ -137,7 +137,7 @@ const getFiveDaysForecast = (cityName, apiKey) => {
   )
     .then((data) => data.json())
     .then((data) => {
-      const { Key } = data[0];
+      const { Key } = data;
       return fetch(
         `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${Key}?apikey=${apiKey}&metric=true`
       );
@@ -189,7 +189,7 @@ const getFiveDaysForecastBylatlong = (lat, long,apiKey) => {
   )
     .then((data) => data.json())
     .then((data) => {
-      const { Key } = data[0];
+      const { Key } = data;
       return fetch(
         `http://dataservice.accuweather.com/forecasts/v1/daily/5day/${Key}?apikey=${apiKey}&metric=true`
       );
