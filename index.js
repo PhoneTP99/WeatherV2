@@ -97,35 +97,35 @@ const getLocationIdAndWeatherBylatlong = (lat,long,apiKey) => {
     })
     .then((data) => data.json())
     .then((data) => {
-
+ console.log(data)
       document.querySelector(
         ".degree"
-      ).innerHTML = `${data.ApparentTemperature.Metric.Value}&deg;`;
+      ).innerHTML = `${data[0].ApparentTemperature.Metric.Value}&deg;`;
       document.querySelector(
         ".wind"
-      ).innerHTML = `${data.Wind.Speed.Metric.Value} km/h`;
+      ).innerHTML = `${data[0].Wind.Speed.Metric.Value} km/h`;
       document.querySelector(
         ".humidity"
-      ).innerHTML = `${data.RelativeHumidity} %`;
+      ).innerHTML = `${data[0].RelativeHumidity} %`;
       document.querySelector(".UVindex").innerHTML = `${data[0].UVIndex}`;
       document.querySelector(
         ".description"
-      ).innerHTML = `${data.WeatherText}`;
+      ).innerHTML = `${data[0].WeatherText}`;
 
       document.querySelector(
         ".mini-degree-unit"
-      ).innerHTML = `${data.ApparentTemperature.Metric.Value}&deg;`;
+      ).innerHTML = `${data[0].ApparentTemperature.Metric.Value}&deg;`;
       document.querySelector(
         ".mini-wind"
-      ).innerHTML = `${data.Wind.Speed.Metric.Value} km/h`;
+      ).innerHTML = `${data[0].Wind.Speed.Metric.Value} km/h`;
       document.querySelector(
         ".mini-humidity"
-      ).innerHTML = `${data.RelativeHumidity} %`;
-      document.querySelector(".mini-UV").innerHTML = `${data.UVIndex}`;
-      document.querySelector(".mini-desc").innerHTML = `${data.WeatherText}`;
+      ).innerHTML = `${data[0].RelativeHumidity} %`;
+      document.querySelector(".mini-UV").innerHTML = `${data[0].UVIndex}`;
+      document.querySelector(".mini-desc").innerHTML = `${data[0].WeatherText}`;
       document.querySelector(
         ".feellike"
-      ).innerHTML = `Real-Feel : ${data.RealFeelTemperature.Metric.Value}&deg;`;
+      ).innerHTML = `Real-Feel : ${data[0].RealFeelTemperature.Metric.Value}&deg;`;
 
       document.querySelector(".input").value = "";
     });
