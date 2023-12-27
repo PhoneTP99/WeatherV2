@@ -90,7 +90,7 @@ const getLocationIdAndWeatherBylatlong = (lat,long,apiKey) => {
         return alert('City Not Found!')
       }
       const { Key } = data;
-      document.querySelector('.name').innerHTML =`${data[0].LocalizedName}`;
+      document.querySelector('.name').innerHTML =`${data.LocalizedName}`;
       return fetch(
         `http://dataservice.accuweather.com/currentconditions/v1/${Key}?apikey=${apiKey}&details=true`
       );
@@ -100,32 +100,32 @@ const getLocationIdAndWeatherBylatlong = (lat,long,apiKey) => {
 
       document.querySelector(
         ".degree"
-      ).innerHTML = `${data[0].ApparentTemperature.Metric.Value}&deg;`;
+      ).innerHTML = `${data.ApparentTemperature.Metric.Value}&deg;`;
       document.querySelector(
         ".wind"
-      ).innerHTML = `${data[0].Wind.Speed.Metric.Value} km/h`;
+      ).innerHTML = `${data.Wind.Speed.Metric.Value} km/h`;
       document.querySelector(
         ".humidity"
-      ).innerHTML = `${data[0].RelativeHumidity} %`;
+      ).innerHTML = `${data.RelativeHumidity} %`;
       document.querySelector(".UVindex").innerHTML = `${data[0].UVIndex}`;
       document.querySelector(
         ".description"
-      ).innerHTML = `${data[0].WeatherText}`;
+      ).innerHTML = `${data.WeatherText}`;
 
       document.querySelector(
         ".mini-degree-unit"
-      ).innerHTML = `${data[0].ApparentTemperature.Metric.Value}&deg;`;
+      ).innerHTML = `${data.ApparentTemperature.Metric.Value}&deg;`;
       document.querySelector(
         ".mini-wind"
-      ).innerHTML = `${data[0].Wind.Speed.Metric.Value} km/h`;
+      ).innerHTML = `${data.Wind.Speed.Metric.Value} km/h`;
       document.querySelector(
         ".mini-humidity"
-      ).innerHTML = `${data[0].RelativeHumidity} %`;
-      document.querySelector(".mini-UV").innerHTML = `${data[0].UVIndex}`;
-      document.querySelector(".mini-desc").innerHTML = `${data[0].WeatherText}`;
+      ).innerHTML = `${data.RelativeHumidity} %`;
+      document.querySelector(".mini-UV").innerHTML = `${data.UVIndex}`;
+      document.querySelector(".mini-desc").innerHTML = `${data.WeatherText}`;
       document.querySelector(
         ".feellike"
-      ).innerHTML = `Real-Feel : ${data[0].RealFeelTemperature.Metric.Value}&deg;`;
+      ).innerHTML = `Real-Feel : ${data.RealFeelTemperature.Metric.Value}&deg;`;
 
       document.querySelector(".input").value = "";
     });
