@@ -1,5 +1,5 @@
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
-const apiKey = "c4WCfjxbWAwj3tHgZkO5zIKUrf7ZuwGw";
+const apiKey = "yz2cLALe0Ikav2CZcnjQPKMBhIz95trr";
 
 const setTimeAndDate = () => {
   const today = dayjs().format("DD.MM.YYYY");
